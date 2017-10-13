@@ -1,0 +1,41 @@
+{
+  "code": 200,
+  "message": null,
+  "notices": [
+    {
+      "signature": "",
+      "title": "今日食谱",
+      "noticeTime": "2017-10-13",
+      "content": "【1.早餐】  八宝红枣姜都粥、北京烤鸭\n"
+    },
+    {
+      "signature": "",
+      "title": "通知",
+      "noticeTime": "2017-10-13",
+      "content": "法国豪华"
+    }
+  ],
+  "pictures": [
+    {
+      "title": 2,
+      "url": "http://pic23.photophoto.cn/20120530/0020033092420808_b.jpg"
+    }
+  ],
+  "ads": [
+    {
+      "adType": 1,
+      "pic1": "http://bbtree-kaoqin-ads.bbtree.com/kqad/1501837096174.jpg",
+      "id": 46,
+      "pic2": "http://bbtree-kaoqin-ads.bbtree.com/kqad/1501837099646.jpg"
+    },
+    {
+      "adType": 1,
+      "pic1": "http://bbtree-kaoqin-ads.bbtree.com/kqad/1507685812279.jpg",
+      "id": 67,
+      "pic2": "http://bbtree-kaoqin-ads.bbtree.com/kqad/1507685814908.jpg"
+    }
+  ],
+  "videos": [
+
+  ]
+}

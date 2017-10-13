@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
+import com.defy.bannerviewpager.BaseApp;
 import com.defy.bannerviewpager.R;
 import com.defy.bannerviewpager.bean.Ad;
 import com.defy.bannerviewpager.bean.Notice;
@@ -86,7 +87,7 @@ public class BannerAdapter extends PagerAdapter {
         switch (type) {
             case Constant.TYPE_TEXT: // 文字
                 Notice notice = screenSaverData.getNotice();
-                view = LayoutInflater.from(this.mContext).inflate(R.layout.render_type_text, null);
+                view = LayoutInflater.from(mContext).inflate(R.layout.render_type_text, null);
                 TextView notice_title = (TextView) view.findViewById(R.id.notice_title);
                 notice_title.setText(notice.getTitle());
                 VerticalMarqueeTextView notice_content = (VerticalMarqueeTextView) view.findViewById(R.id.notice_content);
@@ -101,7 +102,7 @@ public class BannerAdapter extends PagerAdapter {
                 Picture picture = screenSaverData.getPicture();
                 RoundedImageView img = (RoundedImageView) LayoutInflater.from(mContext).inflate(R.layout.screen_saver_item, null);
 
-                Picasso.with(mContext).load(picture.getUrl())
+                Picasso.with(BaseApp.getApp()).load(picture.getUrl())
                         .placeholder(R.mipmap.screensaver_default)
                         .error(R.mipmap.screensaver_default)
                         .config(Bitmap.Config.RGB_565).into(img);
@@ -111,16 +112,16 @@ public class BannerAdapter extends PagerAdapter {
                 Ad ad = screenSaverData.getAd();
                 RoundedImageView imgAd = (RoundedImageView) LayoutInflater.from(mContext).inflate(R.layout.screen_saver_item, null);
                 String url;
-                if (mContext.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                if (BaseApp.getApp().getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
                     url = ad.getPic1();
                 } else {
                     url = ad.getPic2();
                 }
                 RequestCreator loadAd;
                 if (TextUtils.isEmpty(url))
-                    loadAd = Picasso.with(this.mContext).load(R.mipmap.screensaver_default);
+                    loadAd = Picasso.with(BaseApp.getApp()).load(R.mipmap.screensaver_default);
                 else
-                    loadAd = Picasso.with(this.mContext).load(url);
+                    loadAd = Picasso.with(BaseApp.getApp()).load(url);
 
                 loadAd.placeholder(R.mipmap.screensaver_default)
                         .error(R.mipmap.screensaver_default)
@@ -133,7 +134,6 @@ public class BannerAdapter extends PagerAdapter {
                 break;
         }
 
-        //TODO 在这里返回你的View
         ((ViewPager) container).addView(view, 0);
         return view;
     }

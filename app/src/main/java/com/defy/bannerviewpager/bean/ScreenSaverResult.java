@@ -45,4 +45,14 @@ public class ScreenSaverResult implements Serializable {
     public void setAds(List<Ad> ads) {
         this.ads = ads;
     }
+
+    @Override
+    public String toString() {
+        return "ScreenSaverResult{" +
+                "notices=" + notices +
+                ", pictures=" + pictures +
+                ", videos=" + videos +
+                ", ads=" + ads +
+                '}';
+    }
 }
