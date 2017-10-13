@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/chenglei/.android/build-cache/893aaa1605ed03f0f91369cc94b6c9440742793e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fbaffbfc2a42fce3718dc9f52182810ad332b0ec">
+        <dex dex="/Users/chenglei/work/test/Banner/BannerViewPager/app/build/intermediates/pre-dexed/debug/classes_bd98d1ba215e3e7ebf9fe7e6fc85a8eaeb297933.jar" />
+    </item>
+
+</items>
